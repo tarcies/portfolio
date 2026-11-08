@@ -163,16 +163,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-10) var(--space-6);
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
   min-height: 100svh;
   margin: 0 auto;
-  padding: var(--space-10) var(--space-6);
   text-align: center;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding: var(--space-10) var(--space-6);
 }
 
 .divider {
@@ -279,8 +285,11 @@ input:-webkit-autofill:active {
   display: block;
   line-height: 2;
   padding-right: var(--space-6);
-  font-size: 18px;
+  font-size: 20px;
   width: 100%;
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
 }
 
 .navigation li:hover {

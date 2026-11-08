@@ -186,7 +186,7 @@
   letter-spacing: 0.1em;
   color: var(--text-muted);
   @media (max-width: 1024px) {
-    font-size: 7px;
+    font-size: 9px;
   }
 }
 
