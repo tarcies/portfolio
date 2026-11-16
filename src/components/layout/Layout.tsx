@@ -7,9 +7,9 @@ import { WIP } from "../layout/WIP";
 export function Layout() {
   return (
     <>
+      <WIP></WIP>
       <Header />
       <main className={styles.main}>
-        <WIP></WIP>
         <Outlet /> {/* the current route's page renders here */}
       </main>
       <Footer />
