@@ -1,0 +1,22 @@
+.header {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.header-title p span {
+  color: var(--accent);
+  padding: 0;
+}
+
+.system-label {
+  color: var(--accent);
+}
+
+.header-meta {
+  padding-top: var(--space-2);
+}
+
+.header-theme {
+  align-self: center;
+  justify-self: end;
+}

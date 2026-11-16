@@ -1,19 +1,20 @@
+import styles from "./Footer.module.css";
 import { Link } from "react-router";
 
 export function Footer() {
   return (
     <footer>
-      <div className="footer">
-        <div className="footer-logo">
+      <div className={styles.footer}>
+        <div className={styles["footer-logo"]}>
           <p className="display">
             tarcies<span>.</span>
           </p>
           <span className="label">full-stack web developer</span>
         </div>
-        <div className="footer-copyright">
+        <div className={styles["footer-copyright"]}>
           <p>© 2026 tarcies. All rights reserved.</p>
         </div>
-        <div className="footer-links">
+        <div className={styles["footer-links"]}>
           <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
           <a href="https://github.com/tarcies">GitHub</a>

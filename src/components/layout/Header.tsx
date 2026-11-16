@@ -1,3 +1,4 @@
+import styles from "./Header.module.css";
 import { Navbar } from "./Navbar";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -5,11 +6,11 @@ export function Header() {
   return (
     <header>
       <Navbar />
-      <div className="header">
-        <div className="header-title">
-          <p className="system-label">TARCIES.DEV</p>
+      <div className={styles.header}>
+        <div className={styles["header-title"]}>
+          <p className={styles["system-label"]}>TARCIES.DEV</p>
           <p className="display">Portfolio</p>
-          <div className="header-meta label">
+          <div className={`label ${styles["header-meta"]}`}>
             <span>B.ICT // </span>
             <span>Junior Web Dev // </span>
             <span>React.js • </span>
@@ -17,7 +18,7 @@ export function Header() {
             <span>PostgreSQL</span>
           </div>
         </div>
-        <div className="header-theme">
+        <div className={styles["header-theme"]}>
           <ThemeToggle />
         </div>
       </div>

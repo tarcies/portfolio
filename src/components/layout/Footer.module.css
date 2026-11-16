@@ -1,0 +1,35 @@
+footer {
+  border-top: 4px solid var(--border);
+  width: 100%;
+  padding: var(--space-8) var(--space-4) 0;
+  align-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo p {
+  font-size: 28px;
+}
+
+.footer-logo span {
+  color: var(--accent);
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.footer-links {
+  text-align: end;
+  font-size: 14px;
+}
+
+.footer-links a {
+  padding: 0 var(--space-1);
+}
