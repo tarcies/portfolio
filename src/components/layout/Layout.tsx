@@ -8,7 +8,7 @@ export function Layout() {
   return (
     <>
       <Header />
-      <main>
+      <main className={styles.main}>
         <WIP></WIP>
         <Outlet /> {/* the current route's page renders here */}
       </main>
