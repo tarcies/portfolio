@@ -1,0 +1,23 @@
+.wip {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin: auto -50vw;
+  padding: var(--space-8) 0;
+
+  text-align: center;
+  background-image: url("../../assets/wip.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.wip .text {
+  background-color: var(--bg-base);
+  padding: var(--space-12);
+}
+
+.wip .text p {
+  font-size: 40px;
+  margin-bottom: var(--space-3);
+}
