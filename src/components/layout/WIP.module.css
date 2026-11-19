@@ -19,6 +19,5 @@
 }
 
 .wip .text p {
-  font-size: 40px;
-  margin-bottom: var(--space-3);
+  margin: var(--space-3) 0;
 }
