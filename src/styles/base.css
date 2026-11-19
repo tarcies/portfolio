@@ -14,10 +14,15 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  width: 100%;
+  padding: var(--space-10) 0;
+}
+
+.container {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  padding: var(--space-10) var(--space-6);
+  padding: 0 var(--space-6);
 }
 
 .card {
@@ -28,14 +33,14 @@ html {
   border-radius: var(--radius-lg);
 }
 
-a:link {
-  color: var(--accent);
+a {
   text-decoration: none;
   transition: 0.2s ease;
 }
 
+a:link,
 a:visited {
-  color: var(--accent-dim);
+  color: var(--accent);
 }
 
 a:hover {

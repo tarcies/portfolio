@@ -8,11 +8,13 @@ export function Layout() {
   return (
     <>
       <WIP></WIP>
-      <Header />
-      <main className={styles.main}>
-        <Outlet /> {/* the current route's page renders here */}
-      </main>
-      <Footer />
+      <div className="container">
+        <Header />
+        <main className={styles.main}>
+          <Outlet /> {/* the current route's page renders here */}
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
