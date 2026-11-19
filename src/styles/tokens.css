@@ -75,28 +75,30 @@
   --bg-surface: var(--gray-800);
   --bg-elevated: var(--gray-700);
   --bg-subtle: var(--gray-600);
+  --bg-dim: color-mix(in srgb, var(--gray-700) 40%, transparent);
 
   --text-primary: var(--gray-100);
   --text-secondary: var(--gray-300);
   --text-muted: var(--gray-400);
 
-  --border: rgb(from var(--white) r g b / 0.08);
-  --border-hover: rgb(from var(--white) r g b / 0.16);
+  --border: color-mix(in srgb, var(--white) 8%, transparent);
+  --border-hover: color-mix(in srgb, var(--white) 16%, transparent);
 
   --accent: var(--purple-500);
   --accent-glow: var(--purple-300);
   --accent-hover: var(--purple-300);
   --accent-active: var(--purple-700);
-  --accent-dim: rgb(from var(--purple-500) r g b / 0.2);
+  --accent-dim: color-mix(in srgb, var(--purple-800) 20%, transparent);
 
   --success: var(--green-500);
-  --success-dim: var(--green-900);
   --warning: var(--amber-500);
-  --warning-dim: var(--amber-900);
   --danger: var(--red-500);
-  --danger-dim: var(--red-900);
   --info: var(--aqua-500);
-  --info-dim: var(--aqua-900);
+
+  --success-dim: color-mix(in srgb, var(--green-900) 40%, transparent);
+  --warning-dim: color-mix(in srgb, var(--amber-900) 40%, transparent);
+  --danger-dim: color-mix(in srgb, var(--red-900) 40%, transparent);
+  --info-dim: color-mix(in srgb, var(--aqua-900) 40%, transparent);
 
   --gap-inline: var(--space-2);
   --gap-component: var(--space-4);
@@ -134,19 +136,20 @@
   --bg-surface: var(--gray-100);
   --bg-elevated: var(--gray-200);
   --bg-subtle: var(--gray-300);
+  --bg-dim: color-mix(in srgb, var(--gray-300) 40%, transparent);
 
   --text-primary: var(--gray-800);
   --text-secondary: var(--gray-600);
   --text-muted: var(--gray-500);
 
-  --border: rgb(from var(--black) r g b / 0.08);
-  --border-hover: rgb(from var(--black) r g b / 0.16);
+  --border: color-mix(in srgb, var(--black) 8%, transparent);
+  --border-hover: color-mix(in srgb, var(--black) 16%, transparent);
 
   --accent-hover: var(--purple-800);
-  --accent-dim: var(--purple-100);
+  --accent-dim: color-mix(in srgb, var(--purple-100) 20%, transparent);
 
-  --success-dim: var(--green-100);
-  --warning-dim: var(--amber-100);
-  --danger-dim: var(--red-100);
-  --info-dim: var(--aqua-100);
+  --success-dim: color-mix(in srgb, var(--green-100) 20%, transparent);
+  --warning-dim: color-mix(in srgb, var(--amber-100) 20%, transparent);
+  --danger-dim: color-mix(in srgb, var(--red-100) 20%, transparent);
+  --info-dim: color-mix(in srgb, var(--aqua-100) 20%, transparent);
 }
