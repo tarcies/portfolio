@@ -25,6 +25,7 @@ export function Projects() {
           return (
             <ProjectCard
               key={project.id}
+              id={project.id}
               title={project.name}
               desc={project.desc}
               tech={project.tech}
