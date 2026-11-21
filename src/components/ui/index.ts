@@ -1,6 +1,6 @@
 export { Badge } from "./Badge";
 export { Button } from "./Button";
-export { Card } from "./Card";
+export { ProjectCard } from "./ProjectCard";
 export { Modal } from "./Modal";
 export { SectionHeading } from "./SectionHeading";
 export { SocialLinks } from "./SocialLinks";
