@@ -1,0 +1,78 @@
+.project-card {
+  display: grid;
+  grid-template: 1fr auto 1fr / 1fr auto;
+  cursor: pointer;
+}
+
+.proj-title {
+  grid-area: 1 / 1 / 2 / span 1;
+}
+
+.proj-title p {
+  margin-bottom: var(--space-2);
+}
+
+.proj-status {
+  grid-area: 1 / 2 / 2 / span 1;
+  justify-self: end;
+  align-self: start;
+}
+
+.proj-desc {
+  grid-area: 2 / 1 / span 1 / -1;
+  align-self: center;
+  padding: var(--space-4) 0;
+}
+
+.proj-progress {
+  grid-area: 3 / 1 / span 1 / -1;
+  align-self: end;
+  font-size: 24px;
+}
+
+.proj-progress-bar {
+  height: 3px;
+  background-color: var(--border);
+  margin: var(--space-1) 0;
+}
+
+.proj-progress-bar .progress {
+  position: relative;
+  height: 4px;
+  background-color: var(--accent);
+  z-index: 1000;
+}
+
+@property --a {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --a: 0deg;
+  }
+  to {
+    --a: 360deg;
+  }
+}
+
+.project-card-wrapper {
+  margin: 8px;
+  padding: 2px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+}
+
+.project-card-wrapper:hover {
+  transform: scale(1.02);
+  animation: spin 4s linear infinite;
+  background: conic-gradient(
+    from var(--a),
+    var(--accent-glow),
+    var(--bg-surface),
+    var(--bg-surface),
+    var(--accent-glow)
+  );
+}
