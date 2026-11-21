@@ -1,11 +1,13 @@
 // import styles from "./Hero.module.css";
-import { Empty } from "./Empty";
+
+import { Gap } from "./Gap";
 
 export function Hero() {
   return (
     <>
-      <Empty></Empty>
-      <Empty></Empty>
+      <Gap height="20dvh"></Gap>
+      <></>
+      <Gap height="20dvh"></Gap>
     </>
   );
 }
