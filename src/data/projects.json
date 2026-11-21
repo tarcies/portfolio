@@ -27,7 +27,7 @@
     "progress": 30
   },
   {
-    "id": 3,
+    "id": 0,
     "name": "Test Project",
     "desc": "This is a test project to showcase the project card",
     "tech": ["Next.js", "TypeScript"],
@@ -36,7 +36,7 @@
     "progress": 100
   },
   {
-    "id": 4,
+    "id": 1,
     "name": "Test Project",
     "desc": "This is a test project to showcase the project card",
     "tech": ["TypeScript"],

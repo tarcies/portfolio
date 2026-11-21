@@ -2,6 +2,7 @@ import styles from "./ProjectCard.module.css";
 import { Badge, type input as BadgeInput } from "./Badge";
 
 type input = {
+  id: number;
   title: string;
   desc: string;
   tech: Array<string>;
@@ -11,6 +12,7 @@ type input = {
 };
 
 export function ProjectCard({
+  id,
   title,
   desc,
   tech,
@@ -38,6 +40,10 @@ export function ProjectCard({
             ></div>
           </div>
         </div>
+        <img
+          src={`/projects/${id}/thumbnail.jpg`}
+          className={styles["proj-img"]}
+        ></img>
       </div>
     </div>
   );
