@@ -1,7 +1,8 @@
 export { Badge } from "./Badge";
 export { Button } from "./Button";
 export { ProjectCard } from "./ProjectCard";
-export { Modal } from "./Modal";
+export { ProjectModal } from "./ProjectModal";
+export { ProgressBar } from "./ProgressBar";
 export { SectionHeading } from "./SectionHeading";
 export { SocialLinks } from "./SocialLinks";
 export { TextBlock } from "./TextBlock";

@@ -1,0 +1,98 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 900;
+  animation: fadeIn 0.2s ease;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  padding: var(--space-12) !important;
+  gap: var(--space-4);
+  animation: scaleUp 0.5s ease;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 85dvh;
+  overflow-y: auto !important;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.badge {
+  transform: scale(1.5);
+  position: absolute;
+  align-self: flex-end;
+}
+
+.title {
+  text-align: center;
+}
+
+.title .tech {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.gallery {
+  display: flex;
+  gap: var(--space-4);
+  min-height: 400px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  -ms-overflow-style: none;
+  scrollbar-width: 80px;
+}
+
+/* TODO: Keep until arrow buttons */
+.gallery::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.gallery img {
+  flex: 0 0 80%;
+  width: 80%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.progress {
+  margin: var(--space-8) 0;
+}
+
+.progress .label {
+  background-color: var(--bg-surface);
+  padding: 0 var(--space-4);
+  align-self: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
