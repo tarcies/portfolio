@@ -1,5 +1,6 @@
 import styles from "./ProjectCard.module.css";
 import { Badge, type input as BadgeInput } from "./Badge";
+import { ProgressBar } from "./ProgressBar";
 
 type input = {
   id: number;
@@ -9,6 +10,7 @@ type input = {
   btext: string;
   btype: BadgeInput["type"];
   progress: number;
+  setSelectedItem: Function;
 };
 
 export function ProjectCard({
@@ -19,9 +21,14 @@ export function ProjectCard({
   btext,
   btype,
   progress,
+  setSelectedItem,
 }: input) {
   return (
-    <div className={`${styles["project-card-wrapper"]} easing-base`}>
+    <div
+      className={`${styles["project-card-wrapper"]} easing-base`}
+      onClick={() => setSelectedItem(id)}
+      onKeyDown={(e) => e.key === "Enter" && setSelectedItem(id)}
+    >
       <div className={`card ${styles["project-card"]}`}>
         <div className={styles["proj-title"]}>
           <p className={`h2`}>{title}</p>
@@ -32,13 +39,8 @@ export function ProjectCard({
         </Badge>
         <span className={`body ${styles["proj-desc"]}`}>{desc}</span>
         <div className={styles["proj-progress"]}>
-          <span className="h2">{progress}%</span>
-          <div className={styles["proj-progress-bar"]}>
-            <div
-              className={styles["progress"]}
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
+          <span className="h2">{`${progress}%`}</span>
+          <ProgressBar progress={progress}></ProgressBar>
         </div>
         <img
           src={`/projects/${id}/thumbnail.jpg`}

@@ -35,7 +35,7 @@
 .project-card {
   display: grid;
   grid-template: repeat(2, 1fr auto) / 1fr auto;
-  gap: var(--space-4);
+  gap: var(--space-2);
   cursor: pointer;
   height: 100%;
 }
@@ -64,19 +64,6 @@
   grid-area: 3 / 1 / span 1 / -1;
   align-self: end;
   font-size: 24px;
-}
-
-.proj-progress-bar {
-  height: 3px;
-  background-color: var(--border);
-  margin: var(--space-1) 0;
-}
-
-.proj-progress-bar .progress {
-  position: relative;
-  height: 4px;
-  background-color: var(--accent);
-  z-index: 100;
 }
 
 .proj-img {
