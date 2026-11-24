@@ -25,9 +25,9 @@ export function ProjectModal({
           </div>
         </div>
         <div className={styles.gallery}>
-          <img src={`/projects/${project.id}/thumbnail.jpg`}></img>
-          <img src={`/projects/${project.id}/thumbnail.jpg`}></img>
-          <img src={`/projects/${project.id}/thumbnail.jpg`}></img>
+          {project.images.map((i) => (
+            <img src={`/projects/${project.id}/${i}`}></img>
+          ))}
         </div>
         <div className={styles.status}>
           <div className={styles.progress}>
@@ -39,13 +39,9 @@ export function ProjectModal({
           </div>
         </div>
         <div className={styles.text}>
-          <TextBlock
-            level="h2"
-            title="Description"
-            body={project.desc}
-          ></TextBlock>
-          <TextBlock level="h2" title="Use" body={project.desc}></TextBlock>
-          <TextBlock level="h2" title="About" body={project.desc}></TextBlock>
+          {project.text.map((t) => (
+            <TextBlock level="h2" title={t.subtitle} body={t.body}></TextBlock>
+          ))}
         </div>
       </div>
     </div>

@@ -2,11 +2,26 @@
   {
     "id": 1,
     "name": "Test Project",
-    "desc": "This is a test project to showcase the project card This is a test project to showcase the project card This is a test project to showcase the project card This is a test project to showcase the project card This is a test project to showcase the project card ",
+    "desc": "This is a test project to showcase the project card.",
     "tech": ["Next.js", "TypeScript", "PostgreSQL"],
     "btext": "In Progress",
     "btype": "warn",
-    "progress": 96
+    "progress": 96,
+    "images": ["thumbnail.jpg", "71546.jpg", "81452.jpg"],
+    "text": [
+      {
+        "subtitle": "About",
+        "body": "lorem ipsum dolor sit amet consectetur adipiscing elit et et dignissimos ullamco reprehenderit est distinctio soluta maxime officia vero harum dolor nulla molestias atque rerum officia laborum qui atque tempor reprehenderit nulla animi quo ducimus fuga adipiscing laborum ut labore facilis pariatur blanditiis atque incididunt mollit deleniti quos est vel"
+      },
+      {
+        "subtitle": "Use Case",
+        "body": "lorem ipsum dolor sit amet consectetur adipiscing elit et et dignissimos ullamco reprehenderit est distinctio soluta maxime officia vero harum dolor nulla molestias atque rerum officia laborum qui atque tempor reprehenderit nulla animi quo ducimus fuga adipiscing laborum ut labore facilis pariatur blanditiis atque incididunt mollit deleniti quos est vel"
+      },
+      {
+        "subtitle": "How To",
+        "body": "lorem ipsum dolor sit amet consectetur adipiscing elit et et dignissimos ullamco reprehenderit est distinctio soluta maxime officia vero harum dolor nulla molestias atque rerum officia laborum qui atque tempor reprehenderit nulla animi quo ducimus fuga adipiscing laborum ut labore facilis pariatur blanditiis atque incididunt mollit deleniti quos est vel"
+      }
+    ]
   },
   {
     "id": 2,
@@ -15,7 +30,8 @@
     "tech": ["Next.js", "PostgreSQL"],
     "btext": "Cancelled",
     "btype": "danger",
-    "progress": 12
+    "progress": 12,
+    "images": ["thumbnail.jpg"]
   },
   {
     "id": 3,
@@ -24,7 +40,14 @@
     "tech": ["TypeScript", "PostgreSQL"],
     "btext": "Archive",
     "btype": "muted",
-    "progress": 30
+    "progress": 30,
+    "images": ["thumbnail.jpg"],
+    "text": [
+      {
+        "subtitle": "About",
+        "body": "lorem ipsum dolor sit amet consectetur adipiscing elit et et dignissimos ullamco reprehenderit est distinctio soluta maxime officia vero harum dolor nulla molestias atque rerum officia laborum qui atque tempor reprehenderit nulla animi quo ducimus fuga adipiscing laborum ut labore facilis pariatur blanditiis atque incididunt mollit deleniti quos est vel"
+      }
+    ]
   },
   {
     "id": 4,
@@ -33,7 +56,14 @@
     "tech": ["Next.js", "TypeScript"],
     "btext": "Done",
     "btype": "success",
-    "progress": 100
+    "progress": 100,
+    "images": ["thumbnail.jpg"],
+    "text": [
+      {
+        "subtitle": "About",
+        "body": "lorem ipsum dolor sit amet consectetur adipiscing elit et et dignissimos ullamco reprehenderit est distinctio soluta maxime officia vero harum dolor nulla molestias atque rerum officia laborum qui atque tempor reprehenderit nulla animi quo ducimus fuga adipiscing laborum ut labore facilis pariatur blanditiis atque incididunt mollit deleniti quos est vel"
+      }
+    ]
   },
   {
     "id": 5,
@@ -42,6 +72,13 @@
     "tech": ["TypeScript"],
     "btext": "Docs",
     "btype": "info",
-    "progress": 76
+    "progress": 76,
+    "images": ["thumbnail.jpg"],
+    "text": [
+      {
+        "subtitle": "About",
+        "body": "lorem ipsum dolor sit amet consectetur adipiscing elit et et dignissimos ullamco reprehenderit est distinctio soluta maxime officia vero harum dolor nulla molestias atque rerum officia laborum qui atque tempor reprehenderit nulla animi quo ducimus fuga adipiscing laborum ut labore facilis pariatur blanditiis atque incididunt mollit deleniti quos est vel"
+      }
+    ]
   }
 ]

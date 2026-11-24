@@ -4,7 +4,7 @@ import { ProgressBar } from "./ProgressBar";
 
 type input = {
   id: number;
-  title: string;
+  name: string;
   desc: string;
   tech: Array<string>;
   btext: string;
@@ -15,7 +15,7 @@ type input = {
 
 export function ProjectCard({
   id,
-  title,
+  name,
   desc,
   tech,
   btext,
@@ -31,7 +31,7 @@ export function ProjectCard({
     >
       <div className={`card ${styles["project-card"]}`}>
         <div className={styles["proj-title"]}>
-          <p className={`h2`}>{title}</p>
+          <p className={`h2`}>{name}</p>
           <p className={`label`}>{tech.join(" · ")}</p>
         </div>
         <Badge type={btype} className={styles["proj-status"]}>

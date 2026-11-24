@@ -6,6 +6,11 @@ import { type input } from "../ui/Badge";
 import { Gap } from "./Gap";
 import { useState, useEffect } from "react";
 
+interface Text {
+  subtitle: string;
+  body: string;
+}
+
 export interface Project {
   id: number;
   name: string;
@@ -14,6 +19,8 @@ export interface Project {
   btext: string;
   btype: input["type"];
   progress: number;
+  images: Array<string>;
+  text: Array<Text>;
 }
 
 const projects = projectsJson as Project[];
@@ -47,7 +54,7 @@ export function Projects() {
             <ProjectCard
               key={project.id}
               id={project.id}
-              title={project.name}
+              name={project.name}
               desc={project.desc}
               tech={project.tech}
               btext={project.btext}
