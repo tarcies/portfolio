@@ -15,8 +15,6 @@ export function Footer() {
           <p>© 2026 tarcies. All rights reserved.</p>
         </div>
         <div className={styles["footer-links"]}>
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
           <a href="https://github.com/tarcies">GitHub</a>
           <a href="https://linkedin.com/in/tarcies/">LinkedIn</a>
         </div>
