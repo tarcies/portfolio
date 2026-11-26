@@ -1,28 +1,60 @@
 import styles from "./Navbar.module.css";
-import { useActiveSection } from "../../hooks/useActiveSection";
+import { Link } from "react-router";
+import { useState } from "react";
 
-const SECTIONS = ["About", "Projects", "Contact"] as const;
+const SECTIONS = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About Me",
+    path: "/about",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "Experience",
+    path: "/experience",
+  },
+  {
+    name: "Skills",
+    path: "/skills",
+  },
+  {
+    name: "Testimonials",
+    path: "/testimonials",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+] as const;
 
 export function Navbar() {
-  const activeId = useActiveSection(SECTIONS);
+  const [activePage, setActivePage] = useState<string>("none");
+  const path = window.location.pathname;
 
   return (
     <nav className={`${styles.navigation} h2`}>
       <ul>
-        {SECTIONS.map((id) => (
-          <li key={id}>
-            <a
-              href={`#${id}`}
-              className={activeId === id ? styles.active : undefined}
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById(id)
-                  ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        {SECTIONS.map((s) => (
+          <li key={s.name}>
+            <Link
+              to={s.path}
+              className={
+                activePage === s.path || path === s.path // Handles refresh / direct access
+                  ? styles.active
+                  : undefined
+              }
+              onClick={() => {
+                setActivePage(s.path);
               }}
             >
-              {id}
-            </a>
+              {s.path === "/" ? "Home" : s.name}
+            </Link>
           </li>
         ))}
       </ul>
