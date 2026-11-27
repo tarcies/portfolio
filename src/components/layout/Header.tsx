@@ -1,11 +1,25 @@
 import styles from "./Header.module.css";
 import { Navbar } from "./Navbar";
 import { ThemeToggle } from "./ThemeToggle";
+import { TextBlock } from "../ui";
+import { useLocation } from "react-router";
 
 export function Header() {
+  const path = useLocation().pathname;
+
+  const titles: Record<string, string> = {
+    "/": "Home",
+    "/about": "About Me",
+    "/projects": "Projects",
+    "/experience": "Experience",
+    "/skills": "Skills",
+    "/testimonials": "Testimonials",
+    "/contact": "Contact",
+  };
+
   return (
     <header>
-      <Navbar />
+      <Navbar routes={titles} activePath={path} />
       <div className={styles.header}>
         <div className={styles["header-title"]}>
           <p className={styles["system-label"]}>TARCIES.DEV</p>
@@ -22,6 +36,7 @@ export function Header() {
           <ThemeToggle />
         </div>
       </div>
+      {path !== "/" && <TextBlock title={titles[path] || "Page Not Found"} />}
     </header>
   );
 }

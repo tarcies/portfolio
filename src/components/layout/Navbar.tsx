@@ -1,59 +1,27 @@
 import styles from "./Navbar.module.css";
 import { Link } from "react-router";
-import { useState } from "react";
 
-const SECTIONS = [
-  {
-    name: "Home",
-    path: "/",
-  },
-  {
-    name: "About Me",
-    path: "/about",
-  },
-  {
-    name: "Projects",
-    path: "/projects",
-  },
-  {
-    name: "Experience",
-    path: "/experience",
-  },
-  {
-    name: "Skills",
-    path: "/skills",
-  },
-  {
-    name: "Testimonials",
-    path: "/testimonials",
-  },
-  {
-    name: "Contact",
-    path: "/contact",
-  },
-] as const;
-
-export function Navbar() {
-  const [activePage, setActivePage] = useState<string>("none");
-  const path = window.location.pathname;
-
+export function Navbar({
+  routes,
+  activePath,
+}: {
+  routes: Record<string, string>;
+  activePath: string;
+}) {
   return (
     <nav className={`${styles.navigation} h2`}>
       <ul>
-        {SECTIONS.map((s) => (
-          <li key={s.name}>
+        {Object.entries(routes).map(([key, value]) => (
+          <li key={key}>
             <Link
-              to={s.path}
+              to={key}
               className={
-                activePage === s.path || path === s.path // Handles refresh / direct access
+                activePath === key // || path === r.path // Handles refresh / direct access
                   ? styles.active
                   : undefined
               }
-              onClick={() => {
-                setActivePage(s.path);
-              }}
             >
-              {s.path === "/" ? "Home" : s.name}
+              {key === "/" ? "Home" : value}
             </Link>
           </li>
         ))}
