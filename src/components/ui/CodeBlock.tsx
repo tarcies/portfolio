@@ -1,3 +1,4 @@
+import styles from "./CodeBlock.module.css";
 import hljs from "highlight.js/lib/common";
 import { useMemo } from "react";
 
@@ -12,10 +13,14 @@ export function CodeBlock({ code, language, fileName }: Props) {
 
   return (
     <div>
-      {fileName ? <span className="code-file-name">{fileName}</span> : ""}
+      {fileName ? (
+        <span className={styles["code-file-name"]}>{fileName}</span>
+      ) : (
+        ""
+      )}
       <pre>
         <code
-          className={`code hljs${language ? ` language-${language}` : ""}`}
+          className={`${styles.code} hljs${language ? ` language-${language}` : ""}`}
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </pre>

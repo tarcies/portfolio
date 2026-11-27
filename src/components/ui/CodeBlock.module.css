@@ -1,0 +1,20 @@
+.code-file-name {
+  position: relative;
+  bottom: -16px;
+  left: var(--space-2);
+  line-height: 1;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.code {
+  font-size: 13px;
+  border: 2px solid var(--bg-elevated);
+  border-radius: var(--radius-md);
+  @media (max-width: 1024px) {
+    font-size: 11px;
+  }
+}
