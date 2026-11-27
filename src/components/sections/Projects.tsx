@@ -47,7 +47,6 @@ export function Projects() {
 
   return (
     <>
-      <Gap height="2dvh"></Gap>
       <div className={`grid`}>
         {projects.map((project) => {
           return (
@@ -71,7 +70,6 @@ export function Projects() {
           setSelectedItem={setSelectedItem}
         ></ProjectModal>
       )}
-      <Gap height="2dvh"></Gap>
     </>
   );
 }
