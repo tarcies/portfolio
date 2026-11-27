@@ -1,3 +1,4 @@
+import styles from "./NotificationContext.module.css";
 import {
   createContext,
   useCallback,
@@ -49,7 +50,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
           <div
             key={id}
             role="status"
-            className="notification card h2"
+            className={`${styles.notification} card h2`}
             style={{ color: `var(${color})` }}
             onAnimationEnd={() => remove(id)}
           >
