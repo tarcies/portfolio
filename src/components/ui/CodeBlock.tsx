@@ -2,7 +2,11 @@ import styles from "./CodeBlock.module.css";
 import hljs from "highlight.js/lib/common";
 import { useMemo } from "react";
 
-type Props = { code: string; language?: string; fileName?: string };
+interface Props {
+  code: string;
+  language?: string;
+  fileName?: string;
+}
 
 export function CodeBlock({ code, language, fileName }: Props) {
   const html = useMemo(() => {
@@ -12,11 +16,11 @@ export function CodeBlock({ code, language, fileName }: Props) {
   }, [code, language]);
 
   return (
-    <div>
-      {fileName ? (
-        <span className={styles["code-file-name"]}>{fileName}</span>
-      ) : (
-        ""
+    <figure>
+      {fileName && (
+        <figcaption className={`${styles["code-file-name"]} label`}>
+          {fileName}
+        </figcaption>
       )}
       <pre>
         <code
@@ -24,6 +28,6 @@ export function CodeBlock({ code, language, fileName }: Props) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </pre>
-    </div>
+    </figure>
   );
 }
