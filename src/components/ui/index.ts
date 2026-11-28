@@ -4,7 +4,6 @@ export { Gap } from "./Gap";
 export { ProjectCard } from "./ProjectCard";
 export { ProjectModal } from "./ProjectModal";
 export { ProgressBar } from "./ProgressBar";
-export { SectionHeading } from "./SectionHeading";
 export { SocialLinks } from "./SocialLinks";
 export { TextBlock } from "./TextBlock";
 export { ImageBlock } from "./ImageBlock";
