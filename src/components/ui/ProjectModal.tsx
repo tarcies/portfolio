@@ -27,7 +27,7 @@ export function ProjectModal({
             <ImageBlock
               key={i}
               src={`/projects/${project.id}/${i}`}
-              className={styles.image}
+              className={`${styles.image} ${project.images?.length === 1 && styles.solo}`}
             />
           ))}
         </div>

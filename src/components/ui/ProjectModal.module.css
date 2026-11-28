@@ -44,7 +44,7 @@
 .gallery {
   display: flex;
   gap: var(--space-4);
-  min-height: 400px;
+  min-height: 40dvh;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -63,6 +63,11 @@
   margin: 0 auto;
   scroll-snap-align: center;
   scroll-snap-stop: always;
+}
+
+.gallery .image.solo {
+  flex: 0 0 100%;
+  width: 100%;
 }
 
 .progress {
