@@ -3,7 +3,6 @@ import projectsJson from "../../data/projects.json";
 import { ProjectCard } from "../ui";
 import { ProjectModal } from "../ui";
 import { type input } from "../ui/Badge";
-import { Gap } from "./Gap";
 import { useState, useEffect } from "react";
 
 interface Text {
@@ -19,8 +18,8 @@ export interface Project {
   btext: string;
   btype: input["type"];
   progress: number;
-  images: Array<string>;
-  text: Array<Text>;
+  images?: Array<string>;
+  text?: Array<Text>;
 }
 
 const projects = projectsJson as Project[];

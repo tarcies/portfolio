@@ -1,4 +1,4 @@
-import { Gap } from "../sections";
+import { Gap } from "../ui";
 import styles from "./Footer.module.css";
 
 export function Footer() {

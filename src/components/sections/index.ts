@@ -5,4 +5,3 @@ export { Projects } from "./Projects";
 export { Experience } from "./Experience";
 export { Testimonials } from "./Testimonials";
 export { Contact } from "./Contact";
-export { Gap } from "./Gap";

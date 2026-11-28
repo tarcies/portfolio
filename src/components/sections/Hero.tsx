@@ -1,6 +1,5 @@
-// import styles from "./Hero.module.css";
-
-import { Gap } from "./Gap";
+import styles from "./Hero.module.css";
+import { Gap } from "../ui";
 
 export function Hero() {
   return (
