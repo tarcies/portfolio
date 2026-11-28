@@ -30,6 +30,7 @@
   transform: scale(1.5);
   position: absolute;
   align-self: flex-end;
+  z-index: 1000;
 }
 
 .title {
