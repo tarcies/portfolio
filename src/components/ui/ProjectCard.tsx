@@ -1,6 +1,7 @@
 import styles from "./ProjectCard.module.css";
 import { Badge, type input as BadgeInput } from "./Badge";
 import { ProgressBar } from "./ProgressBar";
+import { ImageBlock } from "./ImageBlock";
 
 type input = {
   id: number;
@@ -42,10 +43,10 @@ export function ProjectCard({
           <span className="h2">{`${progress}%`}</span>
           <ProgressBar progress={progress}></ProgressBar>
         </div>
-        <img
+        <ImageBlock
           src={`/projects/${id}/thumbnail.jpg`}
           className={styles["proj-img"]}
-        ></img>
+        ></ImageBlock>
       </div>
     </div>
   );

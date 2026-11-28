@@ -1,9 +1,6 @@
 import styles from "./ProjectModal.module.css";
 import type { Project } from "../sections/Projects";
-import { ProgressBar } from "./ProgressBar";
-import { Badge } from "./Badge";
-import { TextBlock } from "./TextBlock";
-import { Gap } from "../sections";
+import { Badge, Gap, TextBlock, ProgressBar, ImageBlock } from ".";
 
 export function ProjectModal({
   project,
@@ -26,8 +23,12 @@ export function ProjectModal({
           </div>
         </div>
         <div className={styles.gallery}>
-          {project.images.map((i) => (
-            <img src={`/projects/${project.id}/${i}`}></img>
+          {project.images?.map((i) => (
+            <ImageBlock
+              key={i}
+              src={`/projects/${project.id}/${i}`}
+              className={styles.image}
+            />
           ))}
         </div>
         <div className={styles.status}>
@@ -40,15 +41,15 @@ export function ProjectModal({
           </div>
         </div>
         <div className={styles.text}>
-          {project.text.map((t) => (
-            <>
+          {project.text?.map((t) => (
+            <div key={t.subtitle}>
               <TextBlock
                 level="h2"
                 title={t.subtitle}
                 body={t.body}
               ></TextBlock>
               <Gap height="var(--space-10 )"></Gap>
-            </>
+            </div>
           ))}
         </div>
       </div>

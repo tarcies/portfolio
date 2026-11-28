@@ -49,20 +49,18 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overscroll-behavior-x: contain;
+  scrollbar-width: none;
   -ms-overflow-style: none;
-  scrollbar-width: 80px;
 }
 
-/* TODO: Keep until arrow buttons */
 .gallery::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 
-.gallery img {
+.gallery .image {
   flex: 0 0 80%;
   width: 80%;
-  object-fit: cover;
-  border-radius: var(--radius-md);
+  margin: 0 auto;
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
